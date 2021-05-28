@@ -1,7 +1,8 @@
+# Ruby Problem Solving - Problem 4
 def leap_year(year)
-  unless year % 4 == 0 then return false end
-  unless year % 100 == 0 then return true end 
-  if year % 400 == 0 then return true end
+  return false unless year % 4 == 0
+  return true unless year % 100 == 0
+  return true if year % 400 == 0
   return false
 end
 
