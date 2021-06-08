@@ -1,12 +1,20 @@
-class Clip
-  attr_reader :comments
-
-  def initialize
-    @comments = []
+module AcceptsComments
+  def comments
+    if @comments
+      @comments
+    else
+      @comments = []
+    end
   end
 
   def add_comment(comment)
     comments << comment
+  end
+end
+
+class Clip
+  def initialize
+    @comments = []
   end
 
   def play
@@ -15,10 +23,12 @@ class Clip
 end
 
 class Video < Clip
+  include AcceptsComments
   attr_accessor :resolution
 end
 
 class Song < Clip
+  include AcceptsComments
   attr_accessor :beats_per_minute
 end
 
