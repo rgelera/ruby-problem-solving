@@ -1,7 +1,10 @@
-require './animal.rb'
+require_relative 'animal.rb'
+require_relative 'mixins.rb'
 
 class Fish < Animal
   attr_reader :water_type
+  include LaysEggs
+  include HasTails
   
   def initialize(name, color, diet, water_type)
     super(name, color, diet)

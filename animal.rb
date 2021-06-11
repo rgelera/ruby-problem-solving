@@ -37,7 +37,7 @@ class Animal
   end
 
   def eat(food)
-    if diet.include? food
+    if @diet.include? food
       "#{@name} eats #{food}. Yummmm!"
     else
       "#{@name} doesn't like #{food}. Blegh!"
