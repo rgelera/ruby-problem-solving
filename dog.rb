@@ -1,4 +1,7 @@
+require './animal.rb'
+
 class Dog < Animal
+  attr_reader :collar_color
   
   def initialize(name, color, diet, collar_color)
     super(name, color, diet)

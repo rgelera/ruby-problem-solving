@@ -1,4 +1,7 @@
+require './animal.rb'
+
 class Bird < Animal
+  attr_reader :size
 
   def initialize(name, color, diet, size)
     super(name, color, diet)

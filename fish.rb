@@ -1,4 +1,7 @@
+require './animal.rb'
+
 class Fish < Animal
+  attr_reader :water_type
   
   def initialize(name, color, diet, water_type)
     super(name, color, diet)

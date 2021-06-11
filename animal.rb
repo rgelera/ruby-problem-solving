@@ -29,8 +29,15 @@ class Animal
     end
   end
 
+  def add_to_diet(food)
+    unless food.is_a? String
+      raise "Food must be a string!"
+    end
+    @diet << food
+  end
+
   def eat(food)
-    if diet.includes? food
+    if diet.include? food
       "#{@name} eats #{food}. Yummmm!"
     else
       "#{@name} doesn't like #{food}. Blegh!"
@@ -42,13 +49,13 @@ class Animal
   end
 
   def print
-    "#{@name} is a #{@color} #{self.class.name} that likes to eat #{@diet.sample}"
+    output = "#{@name} is a #{@color} #{self.class.name.downcase} that likes to eat #{@diet.sample}."
+    output += yield if block_given?
+    output
   end
 
-  private
   def array_of_strings(arr)
     return arr.all? { |x| x.is_a? String } && !arr.empty?
   end
-
-  
 end
+
