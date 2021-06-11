@@ -1,5 +1,5 @@
 class Animal
-  attr_reader :name, :color, :diet
+  attr_reader :name, :color
 
   def initialize(name, color, diet)
     @name = name

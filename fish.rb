@@ -17,6 +17,6 @@ class Fish < Animal
   end
 
   def swim
-    "#{name} swims"
+    "#{name} swims in #{water_type}water."
   end
 end
