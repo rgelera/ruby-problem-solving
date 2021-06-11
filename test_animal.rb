@@ -13,3 +13,11 @@ puts nemo.print
 puts lucky.eat("broccoli")
 lucky.add_to_diet("broccoli")
 puts lucky.eat("broccoli")
+
+puts lucky.run
+puts birb.fly
+puts nemo.swim
+
+[lucky, birb, nemo].each { |animal|
+  puts animal.sleep
+}
