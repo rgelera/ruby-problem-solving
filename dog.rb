@@ -1,7 +1,10 @@
-require './animal.rb'
+require_relative 'animal.rb'
+require_relative 'mixins.rb'
 
 class Dog < Animal
   attr_reader :collar_color
+  include HasTails
+  include BreathesAir
   
   def initialize(name, color, diet, collar_color)
     super(name, color, diet)

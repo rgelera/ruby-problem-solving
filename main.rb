@@ -1,6 +1,6 @@
-require './dog'
-require './fish'
-require './bird'
+require_relative 'dog'
+require_relative 'fish'
+require_relative 'bird'
 
 lucky = Dog.new("Lucky", "brown", ["beef", "chicken", "carrot"], "orange")
 birb = Bird.new("Birb", "green", ["nuts"], "small")
@@ -18,6 +18,11 @@ puts lucky.run
 puts birb.fly
 puts nemo.swim
 
+puts lucky.wag_tail
+puts birb.breathe
+puts nemo.lay_egg
+
 [lucky, birb, nemo].each { |animal|
   puts animal.sleep
 }
+
