@@ -1,10 +1,7 @@
-require_relative 'animal.rb'
-require_relative 'mixins.rb'
+require './animal.rb'
 
 class Bird < Animal
   attr_reader :size
-  include LaysEggs
-  include BreathesAir
 
   def initialize(name, color, diet, size)
     super(name, color, diet)
